@@ -39,12 +39,20 @@ async def tag_check(_, message):
     if await is_admin(message):
        return
     user = message.from_user.id
-    if TAG not in message.from_user.first_name:
+    if TAG in message.from_user.first_name:
+       pass:
+    elif TAG not in message.from_user.last_name:
+
        try:
+
            await tagcheck.restrict_chat_member(
+
              message.chat.id,
+
              user,
+
              ChatPermissions(),
+
            )
        except BaseException as be:
            await message.reply(f"**Error:**\n`{be}`")
