@@ -40,7 +40,7 @@ async def tag_check(_, message):
        return
     user = message.from_user.id
     if TAG in message.from_user.first_name:
-       pass:
+       pass
     elif TAG not in message.from_user.last_name:
 
        try:
